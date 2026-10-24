@@ -1,6 +1,10 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "my-emdash-site",
+	"account_id": "3cec6d0a5b9ec98cc0f6b8dbc3ec1342",
+	"routes": [
+		{ "pattern": "blog.hellojohnny.xyz", "custom_domain": true }
+	],
 	"main": "./src/worker.ts",
 	"compatibility_date": "2026-02-24",
 	"compatibility_flags": ["nodejs_compat"],

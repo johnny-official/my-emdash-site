@@ -102,7 +102,7 @@ function navCurrent(url: string): "page" | "true" | undefined {
 	return undefined;
 }
 
-const lang = getSiteLocale() ?? "en";
+const lang = getSiteLocale() ?? "vi";
 const monogram = [...siteTitle.trim()][0]?.toUpperCase() ?? "";
 const year = new Date().getFullYear();
 ---
@@ -112,7 +112,13 @@ const year = new Date().getFullYear();
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<Font cssVariable="--font-body" preload />
+		<Font
+			cssVariable="--font-body"
+			preload={[
+				{ weight: 400, style: "normal", subset: "latin" },
+				{ weight: 400, style: "normal", subset: "vietnamese" },
+			]}
+		/>
 		<Font cssVariable="--font-mono" />
 		<title>{fullTitle}</title>
 		<EmDashHead page={pageCtx} />

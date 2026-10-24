@@ -31,4 +31,25 @@
 */
 
 :root {
+	--leading-tight: 1.25;
+	--tracking-tight: -0.015em;
+	--tracking-snug: -0.01em;
+}
+
+.intro__title {
+	line-height: var(--leading-tight);
+}
+
+:where(h1, h2, h3, h4, h5, h6, .prose, .site-footer) {
+	overflow-wrap: anywhere;
+}
+
+.site-nav li {
+	min-width: 0;
+	max-width: 100%;
+}
+
+.site-nav a {
+	white-space: normal;
+	overflow-wrap: anywhere;
 }

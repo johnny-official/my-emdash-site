@@ -5,6 +5,7 @@ import { defineConfig, fontProviders } from "astro/config";
 import emdash from "emdash/astro";
 
 export default defineConfig({
+	site: "https://blog.hellojohnny.xyz",
 	output: "server",
 	adapter: cloudflare(),
 	image: {
@@ -24,6 +25,7 @@ export default defineConfig({
 			name: "Inter",
 			cssVariable: "--font-body",
 			weights: [400, 500, 600, 700],
+			subsets: ["latin", "vietnamese"],
 			fallbacks: ["sans-serif"],
 		},
 		{
